@@ -1,25 +1,19 @@
 import React from 'react';
-import MovieList from './components/MovieList';
-import { movies } from './data/movies';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Booking from './pages/Booking';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="app-header">
-        <div className="header-content">
-        </div>
-        <nav className="header-nav">
-          <button className="nav-button">Головна</button>
-          <button className="nav-button">Популярні</button>
-          <button className="nav-button">Новинки</button>
-          <button className="nav-button">Про нас</button>
-        </nav>
-      </header>
-      <main>
-        <MovieList movies={movies} />
-      </main>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/booking/:id" element={<Booking />} />
+      </Routes>
+    </Router>
   );
 }
 

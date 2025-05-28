@@ -10,7 +10,7 @@ const MovieList = ({ movies }) => {
   );
 
   return (
-    <section className="movie-list-container">
+    <div className="movie-list-container">
       <div className="search-container">
         <input
           type="text"
@@ -31,7 +31,7 @@ const MovieList = ({ movies }) => {
           </div>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 
