@@ -1,0 +1,32 @@
+.global-header {
+  background: #242424;
+  padding: 15px 30px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
