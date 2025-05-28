@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="logo-container">
           <img src={logo} alt="CinemaBooking Logo" className="logo" />
-          <span className="site-name">Кінотеатр лисий пень</span>
+          <span className="site-name">Кінотеатр Щебінь</span>
         </Link>
       </div>
     </header>

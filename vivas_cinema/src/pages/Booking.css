@@ -1,12 +1,11 @@
 .booking-page {
   min-height: 100vh;
-  background: #181818;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
   padding: 20px;
   color: #fff;
   font-family: 'Helvetica Neue', sans-serif;
 }
 
-/* Верхня частина сторінки – інформація про фільм */
 .booking-header {
   display: flex;
   align-items: center;
@@ -57,7 +56,6 @@
   color: #e74c3c;
 }
 
-/* Основний контейнер сторінки бронювання – два стовпці */
 .booking-container {
   display: flex;
   gap: 30px;
@@ -76,7 +74,6 @@
   margin-top: 0;
 }
 
-/* Кнопка підтвердження бронювання */
 .confirm-booking-btn {
   width: 100%;
   padding: 15px;
@@ -93,6 +90,49 @@
 .confirm-booking-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+.booking-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
 }
 
 @media (max-width: 768px) {
