@@ -1,4 +1,3 @@
-// src/components/MovieList.jsx
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
 import './MovieList.css';
@@ -11,7 +10,7 @@ const MovieList = ({ movies }) => {
   );
 
   return (
-    <div className="movie-list-container">
+    <section className="movie-list-container">
       <div className="search-container">
         <input
           type="text"
@@ -21,7 +20,6 @@ const MovieList = ({ movies }) => {
           className="search-input"
         />
       </div>
-      
       <div className="movies-grid">
         {filteredMovies.length > 0 ? (
           filteredMovies.map(movie => (
@@ -33,7 +31,7 @@ const MovieList = ({ movies }) => {
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

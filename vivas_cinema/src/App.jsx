@@ -7,8 +7,14 @@ function App() {
   return (
     <div className="App">
       <header className="app-header">
-        <h1>🎬 CinemaBooking</h1>
-        <p>Оберіть фільм та забронюйте квитки</p>
+        <div className="header-content">
+        </div>
+        <nav className="header-nav">
+          <button className="nav-button">Головна</button>
+          <button className="nav-button">Популярні</button>
+          <button className="nav-button">Новинки</button>
+          <button className="nav-button">Про нас</button>
+        </nav>
       </header>
       <main>
         <MovieList movies={movies} />

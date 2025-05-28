@@ -1,24 +1,112 @@
-// src/components/MovieCard.jsx
-import React from 'react';
-import './MovieCard.css';
+/* MovieCard.css */
+.movie-card {
+  background: #F5EDE1;
+  border: 1px solid #D7CCC8;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-const MovieCard = ({ movie }) => {
-  return (
-    <div className="movie-card">
-      <div className="movie-poster">
-        <img src={movie.poster} alt={movie.title} />
-      </div>
-      <div className="movie-info">
-        <h3 className="movie-title">{movie.title}</h3>
-        <p className="movie-genre">{movie.genre}</p>
-        <p className="movie-description">{movie.description}</p>
-        <div className="movie-details">
-          <span className="showtime">{movie.showtime}</span>
-          <span className="duration">{movie.duration}</span>
-        </div>
-      </div>
-    </div>
-  );
-};
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
 
-export default MovieCard;
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-poster img {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  padding: 20px;
+}
+
+.movie-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4E342E;
+}
+
+.movie-genre {
+  color: #6D4C41;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.movie-description {
+  color: #5D4037;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.movie-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #795548;
+  margin-bottom: 15px;
+}
+
+.showtime {
+  font-weight: 600;
+  color: #A1887F;
+}
+
+.duration {
+  color: #8D6E63;
+}
+
+.movie-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.like-button,
+.dislike-button {
+  border: none;
+  background: #D7CCC8;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+  color: #4E342E;
+}
+
+.like-button:hover,
+.dislike-button:hover {
+  background: #4E342E;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .movie-card {
+    margin: 10px;
+  }
+  
+  .movie-info {
+    padding: 15px;
+  }
+  
+  .movie-title {
+    font-size: 1.2rem;
+  }
+}
