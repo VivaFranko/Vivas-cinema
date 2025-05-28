@@ -1,0 +1,106 @@
+.booking-page {
+  min-height: 100vh;
+  background: #181818;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Верхня частина сторінки – інформація про фільм */
+.booking-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #242424;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  color: #ff4b2b;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #ff416c;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.movie-poster-thumb {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.movie-info h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.movie-info p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.showtime {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Основний контейнер сторінки бронювання – два стовпці */
+.booking-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.booking-summary {
+  flex: 1;
+  background: #242424;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 250px;
+}
+
+.booking-summary h2 {
+  margin-top: 0;
+}
+
+/* Кнопка підтвердження бронювання */
+.confirm-booking-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirm-booking-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.5);
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column;
+  }
+  .movie-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
